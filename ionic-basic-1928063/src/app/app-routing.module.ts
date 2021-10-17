@@ -19,12 +19,10 @@ const routes: Routes = [
         loadChildren: () => import('./alumnos/alumnos.module').then( m => m.AlumnosPageModule)
       },
       {
-        path:'idAlumno',
+        path:':idAlumno',
         loadChildren: () => import('./alumnos/detalle-alumno/detalle-alumno.module').then( m => m.DetalleAlumnoPageModule)
       }
     ]
-    
-    
   },
 ];
 

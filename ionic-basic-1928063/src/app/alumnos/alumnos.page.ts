@@ -14,10 +14,9 @@ export class AlumnosPage implements OnInit {
   constructor(private alumnosService: AlumnosService) { }
 
   ngOnInit() {
-      this.alumnos = this.alumnosService.getAlumnos();
-      this.alumnosService.getPersonajes().subscribe((response: any)=>{
+    this.alumnos = this.alumnosService.getAlumnos();
+    this.alumnosService.getPersonajes().subscribe((response: any)=>{
       this.personajes = response.results;
-      console.log(response);
     });
   }
 

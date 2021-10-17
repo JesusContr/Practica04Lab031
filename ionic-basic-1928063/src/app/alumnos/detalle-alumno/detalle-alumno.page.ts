@@ -12,7 +12,7 @@ export class DetalleAlumnoPage implements OnInit {
 
   idAlumno: string;
   alumno: Alumno;
-  constructor(private activateRouter: ActivatedRoute,
+  constructor(private activateRouter: ActivatedRoute, 
     private router: Router, private alumnoService: AlumnosService) { }
 
   ngOnInit() {
@@ -22,9 +22,9 @@ export class DetalleAlumnoPage implements OnInit {
     });
   }
 
+
   borrar(){
     this.alumnoService.borrarAlumno(this.idAlumno);
     this.router.navigate(['/alumnos']);
   }
-
 }
